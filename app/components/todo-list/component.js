@@ -12,10 +12,12 @@ export default class TodoListComponent extends Component {
   addTodo(event) {
     event.preventDefault();
 
-    this.store.createRecord('todo', {
+    const record = this.store.createRecord('todo', {
       title: this.title,
-      done: false
+      done: false,
     });
+
+    record.save();
 
     this.title = '';
   }
