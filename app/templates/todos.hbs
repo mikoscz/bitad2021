@@ -1,0 +1,16 @@
+{{page-title "Todos"}}
+
+<span>List of Todos:</span>
+
+<form>
+  <input type="text" placeholder="Enter todo title...">
+  <button type="submit">Add todo</button>
+</form>
+
+<ul>
+  {{#each @model as |todo|}}
+    <li>{{todo.title}} - {{todo.done}}</li>
+  {{/each}}
+</ul>
+
+{{outlet}}
