@@ -7,6 +7,6 @@
 
 <ul>
   {{#each @todos as |todo|}}
-    <li>{{todo.title}} - {{todo.done}}</li>
+    <Todo @todo={{todo}} />
   {{/each}}
 </ul>
